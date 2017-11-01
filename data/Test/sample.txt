@@ -1,0 +1,126 @@
+SUMIT RATHORE
+Web Developer
+8800904192       sumitrathore1313@gmail.com
+CAREER OBJECTIVE
+Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.
+WORK EXPERIENCE
+Arbunize, Delhi, Delhi
+Internship, Jun 2017 – Jul 2017
+Web Developer
+Design, build, or maintain web sites, using authoring or scripting languages, content creation tools, management tools, and digital media.
+
+EDUCATION
+Ims Engineering College, Ghaziabad, Uttar Pradesh
+B Tech Computer Science and Engineering Candidate, Expected graduation, Aug 2018
+I got 68% till third year of my B Tech
+
+Bhartiya Vidya Peeth Sr. Sec School, Agra, Uttar Pradesh
+Secondary School Examination(10th), Aug 2009 - Aug 2011
+I got 79% in Secondary School Examination
+
+Bhartiya Vidya Peeth Sr. Sec. School, Agra, Uttar Pradesh
+Senior School Certificate Examination(12th), Aug 2012 - Aug 2013
+I got 76% in Senior School Certificate Examination
+
+ADDITIONAL SKILLS
+Laravel  			Open-source PHP web framework
+Angular 2 			Typescript-based open-source front-end web application framework
+Data Analytics
+Deep Learning,  Machine Learning
+Natural Language Processing
+PHP 			 	PHP is a server-side scripting language
+Python		 		High-level programming languages
+JavaScript,  JQuery
+ HTML, CSS, Bootstrap framework
+MySQL/SQLite 			Relational database management system
+Ubuntu, Window 8/10 	 	Operating Systems
+
+PROJECTS UNDERTAKEN
+Student Management System
+Technology/Tools:	Lumen, Angular2, Bootstrap, HTML, CSS, PHP, MySQL, Typescript etc.
+Team Size:		Three
+Description:		Student Management system is web based application in which we store and manage all information about every student like their attendance, assignments and their scholarship details etc. we used client angular 2 as front end and lumen which is Rest API framework of PHP as backend.
+Arbunize Resume Parser
+Technology/Tools:	Deep Learning, Machine Learning, NLP, NLTK, Keras, Sklearn etc.
+Team Size:		One
+Description:		Resume Parsing, also known as CV Parsing, Resume Extraction or CV Extraction, is the conversion of a free-form CV/resume document into structured information or XML format — suitable for storage, reporting and manipulation by a computer.
+IMSEC Sport Fest Website
+Technology/Tools:	PHP, Laravel, Bootstrap, HTML, CSS, SQLite, JavaScript, JQuery etc.
+Team Size:		Two
+Description:		In this project we make our college sport fest (chakravyuh) website for online registration of teams and manage their all facilities like accommodation, planning etc.
+Some Other Projects
+Image Processing Line Follower
+Home Automation IOT
+Face Recognition using convolution neural network
+Automatic Customer Care  					{ Final year project }
+AWARDS AND HONORS
+I got second position in robotics competition in lit Kanpur.
+Won prizes in Technical Competition and creative innovation.
+Participated in various Technical events and Fest at college.
+PERSONAL DETAILS
+Date of Birth:		1 March 1997
+Languages known:	 Hindi and English.
+Address: 		Durga Dairy near Janak Palace Rajpur Bagiya  Agra, Uttar Pradesh  282001
+SUMIT RATHORE
+Web Developer
+8800904192       sumitrathore1313@gmail.com
+CAREER OBJECTIVE
+Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.
+WORK EXPERIENCE
+Arbunize, Delhi, Delhi
+Internship, Jun 2017 – Jul 2017
+Web Developer
+Design, build, or maintain web sites, using authoring or scripting languages, content creation tools, management tools, and digital media.
+
+EDUCATION
+Ims Engineering College, Ghaziabad, Uttar Pradesh
+B Tech Computer Science and Engineering Candidate, Expected graduation, Aug 2018
+I got 68% till third year of my B Tech
+
+Bhartiya Vidya Peeth Sr. Sec School, Agra, Uttar Pradesh
+Secondary School Examination(10th), Aug 2009 - Aug 2011
+I got 79% in Secondary School Examination
+
+Bhartiya Vidya Peeth Sr. Sec. School, Agra, Uttar Pradesh
+Senior School Certificate Examination(12th), Aug 2012 - Aug 2013
+I got 76% in Senior School Certificate Examination
+
+ADDITIONAL SKILLS
+Laravel  			Open-source PHP web framework
+Angular 2 			Typescript-based open-source front-end web application framework
+Data Analytics
+Deep Learning,  Machine Learning
+Natural Language Processing
+PHP 			 	PHP is a server-side scripting language
+Python		 		High-level programming languages
+JavaScript,  JQuery
+ HTML, CSS, Bootstrap framework
+MySQL/SQLite 			Relational database management system
+Ubuntu, Window 8/10 	 	Operating Systems
+
+PROJECTS UNDERTAKEN
+Student Management System
+Technology/Tools:	Lumen, Angular2, Bootstrap, HTML, CSS, PHP, MySQL, Typescript etc.
+Team Size:		Three
+Description:		Student Management system is web based application in which we store and manage all information about every student like their attendance, assignments and their scholarship details etc. we used client angular 2 as front end and lumen which is Rest API framework of PHP as backend.
+Arbunize Resume Parser
+Technology/Tools:	Deep Learning, Machine Learning, NLP, NLTK, Keras, Sklearn etc.
+Team Size:		One
+Description:		Resume Parsing, also known as CV Parsing, Resume Extraction or CV Extraction, is the conversion of a free-form CV/resume document into structured information or XML format — suitable for storage, reporting and manipulation by a computer.
+IMSEC Sport Fest Website
+Technology/Tools:	PHP, Laravel, Bootstrap, HTML, CSS, SQLite, JavaScript, JQuery etc.
+Team Size:		Two
+Description:		In this project we make our college sport fest (chakravyuh) website for online registration of teams and manage their all facilities like accommodation, planning etc.
+Some Other Projects
+Image Processing Line Follower
+Home Automation IOT
+Face Recognition using convolution neural network
+Automatic Customer Care  					{ Final year project }
+AWARDS AND HONORS
+I got second position in robotics competition in lit Kanpur.
+Won prizes in Technical Competition and creative innovation.
+Participated in various Technical events and Fest at college.
+PERSONAL DETAILS
+Date of Birth:		1 March 1997
+Languages known:	 Hindi and English.
+Address: 		Durga Dairy near Janak Palace Rajpur Bagiya  Agra, Uttar Pradesh  282001
