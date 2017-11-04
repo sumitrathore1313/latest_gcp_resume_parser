@@ -65,75 +65,25 @@ class Registration(views.APIView):
                 temp_file.write(chunk)
         input_file = '/home/sumitrathore1313/apps/django/django_projects/Project/data/'+filename
         output_file = '/home/sumitrathore1313/apps/django/django_projects/Project/data/'+filename.split('.')[0]
-        cmd = "java -cp 'bin/*:../GATEFiles/lib/*:../GATEFiles/bin/gate.jar:lib/*' code4goal.antony.resumeparser.ResumeParserProgram %s %s.json" % (input_file, output_file)
-	
-	os.chdir("/home/sumitrathore1313/apps/django/django_projects/Project/ResumeParser/ResumeTransducer/")
-        subprocess.Popen(cmd, shell=True)
-        import time
-        time.sleep(25)
-        with open('/home/sumitrathore1313/apps/django/django_projects/Project/data/'+filename.split('.')[0]+'.json') as json_data:
-            data = json.load(json_data)
-	data = data['basics']
-	name = []
-	email = []
-	middlename = ''
-	firstName = ''
-	surname = ''
-	tempname = data['name']
-	try:
-                gender = data['gender']
-        except KeyError:
-                gender = ""
-	try:
-                jobtitle = data['title']
-        except KeyError:
-                jobtitle = ""
-        try:
-                middlename = data['name']['middlename']
-        except KeyError:
-		pass
-	try:
-                firstName = data['name']['firstName']
-	except KeyError:
-		pass        
-	try:
-                surname = data['name']['surname']
-	except KeyError:
-		pass	
-	try:
-                for i in range(len(data['email'])):
-                        email.append(data['email'][i])
-     	except KeyError:
-		pass
-	name.append(firstName+' '+middlename+' '+surname)
+        
 	from keras.models import load_model
 	classifier_path = "/home/sumitrathore1313/apps/django/django_projects/Project/data/Test/5GramClassifierOther"
 	classifier = load_model(classifier_path)
-	filepath = '/home/sumitrathore1313/apps/django/django_projects/Project/data/'+filename.split('.')[0]
-	#pdf2txt.convert(input_file, output_file)
+	
+	pdf2txt.convert(input_file, output_file)
 	import re
-	import io
-	with io.open(filepath+".html", "r", encoding="utf-8") as f:
-  		resume_html = f.readlines()
-	#return Response({'name': resume_html, 'email': email, 'gender':gender, 'jobtitle':jobtitle})
-	f = io.open(filepath+'.txt' ,"w")
-	for line in resume_html:
-    		text = re.sub(r'<.*?>', '', line)
-    		text = re.sub(r'<.*?>', '', text)
-    		if not text == "\n":
-			f.write(text)
-	f.close()
-	filepath = filepath+'.txt'
-	gsv = GramGloveSentenceVector(filepath,dimension=50, training=False)
+	output_file = output_file+'.txt'
+	with open(output_file, 'r') as f:
+                content = f.readlines()
+        import io
+	
+	with open(output_file, 'r') as f:
+                resume_text = f.read().lower()
+	gsv = GramGloveSentenceVector(output_file,dimension=50, training=False)
 	sen2vec = gsv.get_5gram_sentenceVector()	
 	import numpy as np
 	y_pred = classifier.predict(np.array(sen2vec))	
-	#return Response({'name': name, 'email': email, 'gender':gender, 'jobtitle':jobtitle})
-	with open(filepath, 'r') as f:
-    		content = f.readlines()
-	with open(filepath, 'r') as f:
-		resume_text = f.read().lower()
-	#return Response({'name': name, 'email': email, 'gender':gender, 'jobtitle':jobtitle})
+	#return Response({"sen2vec": len(sen2vec), "dim": len(sen2vec[0])})
 	count = 0
 	labels = ['basic', 'experience', 'education', 'certificate', 'extra', 'skills', 'projects','summary', 'mimc']
 	basic = []
@@ -153,6 +103,7 @@ class Registration(views.APIView):
     		ner_basic.append(getNER(line))
 	#return Response({'name': name, 'email': email, 'gender':gender, 'jobtitle':jobtitle})	
 	temp = []
+	name = []
 	for i in range(len(ner_basic)):
     		for j in range(len(ner_basic[i])):
         		if ner_basic[i][j][1] == 'PERSON':
@@ -160,9 +111,9 @@ class Registration(views.APIView):
     		if len(temp):
         		name.append(" ".join(temp))
     		temp = []
-	#return Response({'nname': name, 'email': ner_basic, 'gender':gender, 'jobtitle':'ss'})
-	number = []
-	#import re
+	#return Response({'nname': name, "basic": ner_basic})
+	number = ""
+	email = ""	
 	email_regex = re.compile(("([a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`"
                     "{|}~-]+)*(@|\sat\s)(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.|"
                     "\sdot\s))+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)"))
@@ -170,10 +121,10 @@ class Registration(views.APIView):
 	number_regex = re.compile("(?:(?:\+?([1-9]|[0-9][0-9]|[0-9][0-9][0-9])\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([0-9][1-9]|[0-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?.*")
 	eresult = re.search(email_regex, resume_text)	
 	if eresult:
-    		email.append(eresult.group(0))
+    		email = eresult.group(0)
 	nresult = re.search(number_regex, resume_text)
 	if nresult:
-    		number.append(nresult.group(0))
-	return Response({'name': "hello"})	
-	number1 = unicode(number[0], errors='ignore')
-	return Response({'name': name, 'email': email, 'phone':number1, 'gender':gender, 'jobtitle':jobtitle})
+    		number = nresult.group(0)
+	#return Response({'name': "hello"})	
+	#number1 = unicode(number[0], errors='ignore')
+	return Response({'name': name, 'email': email, 'phone':number})

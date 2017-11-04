@@ -36,8 +36,9 @@ def convert(fname,outputfile, pages=None):
     converter.close()
     text = output.getvalue()
     output.close
-    with open(outputfile+'.txt','wb+') as f:
-	f.write(text)
+    import io
+    with open(outputfile+'.txt','w') as f:
+	f.write(unicode(unicode(text, errors='ignore')))
     return text
 
 def convertMultiple(pdfDir, txtDir):
